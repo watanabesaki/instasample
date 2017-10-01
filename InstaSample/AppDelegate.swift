@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import NCMB
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,8 +15,47 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
 
+    //アプリが起動するときに最初に呼ばれる
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        NCMB.setApplicationKey("df89d23e1848185a9f61a815c07122da2efe675d467832fc8adb87bc5bd859b3",clientKey:"2a9fc3efe6e6ce275dfe9757f922072199f11b01e6fc0304eb7e6a7b380c9faa")
+        
+        
+        //ログイン状態かどうかを判断する
+        let ud = UserDefaults.standard
+        let islogin = ud.bool(forKey: "isLogin")
+        
+        if islogin == true{
+            //ログイン中だったら
+            //iphoneのサイズに合わせて画面を作成してくれる
+            self.window = UIWindow(frame: UIScreen.main.bounds)
+            //ストーリーボードの最初の画面　Bundle.mainはこのプロジェクト内にあるストーリーボードということ
+            let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+            //最初の画面の生成
+            let rootviewcontroller =  storyboard.instantiateViewController(withIdentifier: "RootTabBarController")
+            self.window?.rootViewController = rootviewcontroller
+            //デフォルトは黒
+            self.window?.backgroundColor = UIColor.white
+            //画面を出す
+            self.window?.makeKeyAndVisible()
+        }else{
+            //ログインしていなかったら
+            //iphoneのサイズに合わせて画面を作成してくれる
+            self.window = UIWindow(frame: UIScreen.main.bounds)
+            //ストーリーボードの最初の画面 Bundle.mainはこのプロジェクト内にあるストーリーボードということ
+            let storyboard = UIStoryboard(name: "signin", bundle: Bundle.main)
+            //最初の画面の生成
+            let rootviewcontroller =  storyboard.instantiateViewController(withIdentifier: "RootnavigationController")
+            self.window?.rootViewController = rootviewcontroller
+            //デフォルトは黒
+            self.window?.backgroundColor = UIColor.white
+            //画面を出す
+            self.window?.makeKeyAndVisible()
+
+        }
+        
+        
+        
         return true
     }
 
