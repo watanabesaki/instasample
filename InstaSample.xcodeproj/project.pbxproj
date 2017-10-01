@@ -21,6 +21,7 @@
 		D4F454AD1F80B261001771C4 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F454AC1F80B261001771C4 /* SignUpViewController.swift */; };
 		D4F454AF1F80C089001771C4 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F454AE1F80C089001771C4 /* SignInViewController.swift */; };
 		D4F454B11F80C549001771C4 /* UserpageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F454B01F80C549001771C4 /* UserpageViewController.swift */; };
+		D4F454B31F80CFFB001771C4 /* editUserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F454B21F80CFFB001771C4 /* editUserInfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		D4F454AC1F80B261001771C4 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		D4F454AE1F80C089001771C4 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		D4F454B01F80C549001771C4 /* UserpageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserpageViewController.swift; sourceTree = "<group>"; };
+		D4F454B21F80CFFB001771C4 /* editUserInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = editUserInfoViewController.swift; sourceTree = "<group>"; };
 		D707DF139CB3C9AB02C41BC5 /* Pods-InstaSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-InstaSample/Pods-InstaSample.release.xcconfig"; sourceTree = "<group>"; };
 		D89C9316BA81BFFED0552D23 /* Pods-InstaSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InstaSample/Pods-InstaSample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -101,6 +103,7 @@
 				D4F454A91F80A018001771C4 /* signin.storyboard */,
 				D4F454AE1F80C089001771C4 /* SignInViewController.swift */,
 				D4F454B01F80C549001771C4 /* UserpageViewController.swift */,
+				D4F454B21F80CFFB001771C4 /* editUserInfoViewController.swift */,
 				D4F454AC1F80B261001771C4 /* SignUpViewController.swift */,
 				D4F454941F809607001771C4 /* Assets.xcassets */,
 				D4F454961F809607001771C4 /* LaunchScreen.storyboard */,
@@ -257,6 +260,7 @@
 			files = (
 				D4F454AF1F80C089001771C4 /* SignInViewController.swift in Sources */,
 				D4F454AD1F80B261001771C4 /* SignUpViewController.swift in Sources */,
+				D4F454B31F80CFFB001771C4 /* editUserInfoViewController.swift in Sources */,
 				D4F454901F809607001771C4 /* ViewController.swift in Sources */,
 				D4F4548E1F809607001771C4 /* AppDelegate.swift in Sources */,
 				D4F454B11F80C549001771C4 /* UserpageViewController.swift in Sources */,

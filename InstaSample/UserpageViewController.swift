@@ -48,6 +48,30 @@ class UserpageViewController: UIViewController {
                 }
             })
         }
+        //退会ボタン
+        let deleteaction = UIAlertAction(title: "退会", style: .default) { (action) in
+            //現在ログインしているアカウント取得
+            let user = NCMBUser.current()
+            user?.deleteInBackground({ (error) in
+                if error != nil{
+                    print("ログアウトエラー")
+                }else{
+                    //ログインアウト成功
+                    //登録が成功した場合
+                    //スト-リーボードの取得
+                    let storyboard = UIStoryboard(name: "signin", bundle: Bundle.main)
+                    let rootviewcontroller = storyboard.instantiateViewController(withIdentifier: "RootnavigationController")
+                    //画面の一番奥の画面に設定する appdeligateのwindowsと同じ意味
+                    UIApplication.shared.keyWindow?.rootViewController = rootviewcontroller
+                    
+                    //ログインアウトしたらuserdefaultに保存
+                    let ud = UserDefaults.standard
+                    ud.set(false, forKey: "isLogin")
+                    ud.synchronize()
+                }
+            })
+        }
+        
         //キャンセルボタン
         let canselAction = UIAlertAction(title: "キャンセル", style: .cancel) { (action) in
             alertContoller.dismiss(animated: true, completion: nil)
@@ -55,6 +79,7 @@ class UserpageViewController: UIViewController {
         
         alertContoller.addAction(canselAction)
         alertContoller.addAction(signoutAction)
+        alertContoller.addAction(deleteaction)
         self.present(alertContoller, animated: true, completion: nil)
     }
     

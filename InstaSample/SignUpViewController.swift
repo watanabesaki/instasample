@@ -42,7 +42,7 @@ class SignUpViewController: UIViewController,UITextFieldDelegate {
     @IBAction func signup(){
         let user = NCMBUser()
         //userid文字数が４文字以下なら登録できない
-        if (userIdTextField.text?.characters.count)! <= 4{
+        if (userIdTextField.text?.characters.count)! < 4{
             print("文字数が足りません")
             return
         }
